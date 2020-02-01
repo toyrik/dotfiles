@@ -1,7 +1,7 @@
 # Настройки моего рабочего окружения 
 Для начала стоит скопировать данный репозиторий в домашнюю дирректорию
 ```
-git clone https://github.com/bydigizu/dotfiles.git
+git clone https://github.com/toyrik/dotfiles.git
 ```
 ## ZSH
 Устанавливаем zsh:
