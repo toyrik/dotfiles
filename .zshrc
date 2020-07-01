@@ -117,6 +117,7 @@ alias s="sudo"
 alias c="clear"
 alias a="clear && alias | less"  # Показать список алиасов
 alias cept="./vendor/bin/codecept" # алиас вызова codecept
+alias php="/opt/lampp/bin/php" # алиас php для xampp
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
