@@ -54,71 +54,137 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
-set textwidth=80        " Устанавливает максимальную ширину абзаца
-set smartcase        " Поиск с использованием умного регистра
-set number                                                     "Включает показ номеров строк
-syntax on                                                      "Включает подсветку синтаксиса
-set incsearch                                                  "Поиск по набору текста (очень полезная функция)
-set hlsearch                                                   "Подсвечивание поиска
-"    :nnoremap <esc>:noh <return> <esc>               "Убирает подсветку последнего поиска по нажатию Esc
-set ignorecase                                                 "Умная зависимость 
-set smartcase                                                  "от регистра %)
-set termencoding=utf8                                          "Кодировка текста по умолчанию
-set nocompatible                                               "Включить несовместимость настроек с Vi (ибо Vi нам и не понадобится)
-set ruler                                                      "Показывать положение курсора всё время.
-set showcmd                                                    "Показывать незавершённые команды в статусбаре
-set foldenable                                                 "Фолдинг по отсупам
-set foldlevel=100                                              " 
-set foldmethod=indent                                          " 
-set noerrorbells visualbell t_vb=                              "Выключаем надоедливый "звонок"
-autocmd GUIEnter * set visualbell t_vb=                        " 
-set mouse=a                                                    "Поддержка мыши
-set mousemodel=popup                                           " 
-set hidden                                                     "Не выгружать буфер, когда переключаемся на другой
-                                                               "Это позволяет редактировать несколько файлов в один
-                                                               "и тот же момент без необходимости сохранения каждый раз
-                                                               "когда переключаешься между ними
-set showtabline=2                                              "Показывать полоску с окрытыми вкладками
-set guioptions-=T                                              "Скрыть панель в gui версии ибо она не нужна
-set ch=1                                                       "Сделать строку команд высотой в одну строку
-set mousehide                                                  "Скрывать указатель мыши, когда печатаем
-set autoindent                                                 "Включить автоотступы
-set wrap                                                       "Переносить строки
-set expandtab                                                  "Преобразование Таба в пробелы
-set shiftwidth=4                                               "Размер табуляции по умолчанию
-set softtabstop=4                                              " 
-set tabstop=4                                                  " 
-set autoindent                                                 " 
+" Устанавливает максимальную ширину абзаца
+set textwidth=80
+
+" Поиск с использованием умного регистра
+set smartcase
+
+" Включает показ номеров строк
+set number
+
+" Включает подсветку синтаксиса
+syntax on
+
+" Поиск по набору текста (очень полезная функция)
+set incsearch
+
+" Подсвечивание поиска
+set hlsearch
+
+" Убирает подсветку последнего поиска по нажатию Esc
+" :nnoremap <esc>:noh <return> <esc>
+
+" Умная зависимость 
+" от регистра %)
+set ignorecase
+set smartcase
+
+" Кодировка текста по умолчанию
+set termencoding=utf8
+
+" Включить несовместимость настроек с Vi (ибо Vi нам и не понадобится)
+set nocompatible
+
+"Показывать положение курсора всё время.
+set ruler
+
+"Показывать незавершённые команды в статусбаре
+set showcmd
+
+"Фолдинг по отсупам
+set foldenable
+set foldlevel=100
+set foldmethod=indent
+
+"Выключаем надоедливый "звонок"
+set noerrorbells visualbell t_vb=
+autocmd GUIEnter * set visualbell t_vb=
+
+"Поддержка мыши
+set mouse=a
+set mousemodel=popup
+
+"Не выгружать буфер, когда переключаемся на другой
+"Это позволяет редактировать несколько файлов в один
+"и тот же момент без необходимости сохранения каждый раз
+"когда переключаешься между ними
+set hidden
+
+"Показывать полоску с окрытыми вкладками
+set showtabline=2
+
+"Скрыть панель в gui версии ибо она не нужна
+set guioptions-=T
+
+"Сделать строку команд высотой в одну строку
+set ch=1
+
+"Скрывать указатель мыши, когда печатаем
+set mousehide
+
+"Включить автоотступы
+set autoindent
+
+"Переносить строки
+set wrap
+
+"Преобразование Таба в пробелы
+set expandtab
+
+"Настраиваем табуляцию по умолчанию
+set shiftwidth=4
+set softtabstop=4
+set tabstop=4
+
 " set statusline=%<%f%h%m%r\ %b\ %{&encoding}\ 0x\ \ %l,%c%V\ %P " Формат строки состояния
 set laststatus=2                                               " 
-set smartindent                                                " Включаем "умные" отступы ( например, авто отступ после {)
-set showmatch                                                  " Отображение парных символов
-set lines=50                                                   " 
-set columns=140                                                " 
-set iskeyword=@,48-57,_,192-255                                " Навигация с учетом русских символов
+
+" Включаем "умные" отступы ( например, авто отступ после {)
+set smartindent
+set autoindent
+
+" Отображение парных символов
+set showmatch
+set lines=50
+set columns=140
+
+" Навигация с учетом русских символов
+set iskeyword=@,48-57,_,192-255
+
 "частичное решение проблемы переключения раскладки
 set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz
-set backspace=indent,eol,start                                 " Удаление символов бэкспэйсом в Windows
+
+" Удаление символов бэкспэйсом в Windows
+set backspace=indent,eol,start
+
 set cursorline
 highlight CursorLine guibg=lightblue ctermbg=lightgray
 highlight CursorLine term=none cterm=none
+
 set history=200
 set wildmenu
 set list listchars=tab:→\ ,trail:·
 map <C-n> :NERDTreeToggle<CR>
 colorscheme onedark
 set guifont=Fura\ Code\ Light\ Nerd\ Font\ Complete:h16 
-    "устанавливаем цвет для lightline
-" let g:lightline = {
-"  \ 'colorscheme': 'onedark',
-"  \ }
 
-" настройки airline
+" -= Настройки airline =-
+"  ---------------------
 let g:airline_theme='onedark'
-let g:airline_powerline_fonts = 1 " Включение поддержки Powerline шрифтов
-let g:airline#extensions#keymap#enablet = 0 " Не показывать текущий маппинг
-let g:airline_section_z = "\ue0a1:%1/%l Col:%c" " Кастомная графа положения курсора
-let g:Powerline_symbols='unicode' " Поддержка unicode
+
+" Включение поддержки Powerline шрифтов
+let g:airline_powerline_fonts = 1
+
+" Не показывать текущий маппинг
+let g:airline#extensions#keymap#enablet = 0
+
+" Кастомная графа положения курсора
+let g:airline_section_z = "\ue0a1:%1/%l Col:%c" 
+
+" Поддержка unicode
+let g:Powerline_symbols='unicode' 
+
 " let g:airline#extensions#xkblayout#enablet = 0 " 
 
 let g:airline#extensions#tabline#enabled = 1
