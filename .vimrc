@@ -72,8 +72,15 @@ set incsearch
 " Подсвечивание поиска
 set hlsearch
 
-" Убирает подсветку последнего поиска по нажатию Esc
-" :nnoremap <esc>:noh <return> <esc>
+" Убирает подсветку поиска по Ctrl-l
+nnoremap <C-L> :nohl<CR>
+
+" Отключаем создание файлов бекапа
+set noswapfile
+set nobackup
+
+" Включаем использование системного буфера для копирования и вставки
+set clipboard+=unnamed,unnamedplus
 
 " Умная зависимость 
 " от регистра %)
@@ -153,7 +160,7 @@ set columns=140
 set iskeyword=@,48-57,_,192-255
 
 "частичное решение проблемы переключения раскладки
-set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz
+set langmap=ёйцукенгшщзхъфывапролджэячсмитьбюЁЙЦУКЕHГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ;`qwertyuiop[]asdfghjkl\\;'zxcvbnm\\,.~QWERTYUIOP{}ASDFGHJKL:\\"ZXCVBNM<>
 
 " Удаление символов бэкспэйсом в Windows
 set backspace=indent,eol,start
