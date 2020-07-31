@@ -174,7 +174,7 @@ set wildmenu
 set list listchars=tab:→\ ,trail:·
 map <C-n> :NERDTreeToggle<CR>
 colorscheme onedark
-set guifont=Fura\ Code\ Light\ Nerd\ Font\ Complete:h16 
+set guifont=Fira\ Code\ Light\ Nerd\ Font\ Complete:h16 
 
 " -= Настройки airline =-
 "  ---------------------

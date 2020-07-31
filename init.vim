@@ -1,5 +1,16 @@
+" URL: https://toyrik.github.io
+" Authors: Mikhail Gortalov (toyrik)
+" Description: В этом файле конфигурации для Nvim собраны плагины и настройки
+" для максимизации удобства разработки web приложений
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" 
+
 " Отключаем совместимость с Vi
-set nocompatible
+if !1 | finish | endif
+
+if &compatible
+    set nocompatible
+endif
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                   Plugins!
 "                            Managed with vim-plug
@@ -11,10 +22,20 @@ set nocompatible
 call plug#begin('~/.vim/plugged')
 
 " Общие
-Plug 'tpope/vim-fugitive'
+"-------------------------------------------------------------------------------
+
+" Добавляет в редактор файловый менеджер
+Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind']} | Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+"Plug 'ryanoasis/vim-devicons'
+
+
+
+" Добавляют в редактор функционал для взаимодействия с системами контроля
+" версий
+Plug 'tpope/vim-fugitive' | Plug 'mhinz/vim-signify'
+
+" Вставляет или удаляет парные символы "['{ и т.д.
 Plug 'jiangmiao/auto-pairs'
-Plug 'itchyny/lightline.vim'
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 
 "HTML
 Plug 'mattn/emmet-vim', { 'for': ['html', 'javascript'] }
@@ -24,6 +45,8 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'morhetz/gruvbox'
 Plug 'lifepillar/vim-solarized8'
 
+" Добавляет информативный статусбар
+Plug 'itchyny/lightline.vim'
 
 " Initialize plugin system
 call plug#end()
@@ -32,6 +55,7 @@ call plug#end()
 
 " Устанавливаем максимальную ширину абзаца
 set textwidth=79
+
 " Добавляем подсветку для визуального ограничения текста
 set colorcolumn=80
 let &colorcolumn=join(range(81,999),",")
@@ -62,6 +86,7 @@ set novisualbell
 set showcmd
 
 " Кодировка текста по умолчанию
+set encoding=utf8
 set termencoding=utf8
 
 " Показ полосы с открытыми вкладками
@@ -98,11 +123,14 @@ set mousemodel=popup
 
 " Подсветка поиска
 set hlsearch
+
 " Включаем регистронезависимый поиск
 set ignorecase
+
 " Включаем умную зависимость от регистра 
 " (в случае если в выражении есть ПРОПИСНЫЕ буквы ищет регистрозависимо)
 set smartcase
+
 " Включаем поиск по набору текста
 set incsearch
 
@@ -115,6 +143,8 @@ set wildmenu
 " Настройки темы оформления
 colorscheme gruvbox
 set background=dark
+
+set guifont=Fira\ Code\ Light\ Nerd\ Font\ Complete:h16
 
 " Настройки lightline
 let g:lightline={
