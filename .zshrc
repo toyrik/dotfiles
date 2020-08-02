@@ -126,3 +126,5 @@ export EDITOR=nvim # Устанавливает редактор nvim редак
 # Install Ruby Gems to ~/gems
 export GEM_HOME="$HOME/gems"
 export PATH="$HOME/gems/bin:$PATH"
+#Добавляет вызов symfonyCLI
+export PATH="$HOME/.symfony/bin:$PATH" 
