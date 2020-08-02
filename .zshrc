@@ -122,7 +122,7 @@ alias php="/opt/lampp/bin/php" # алиас php для xampp
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-export EDITOR=nvim
+export EDITOR=nvim # Устанавливает редактор nvim редактором по умолчанию для консольных приложений
 # Install Ruby Gems to ~/gems
 export GEM_HOME="$HOME/gems"
 export PATH="$HOME/gems/bin:$PATH"
