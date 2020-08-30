@@ -103,7 +103,7 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 
 ```bash
 cd .config/nvim
-ln -s dotfiles/init.vim
+ln -s ~/dotfiles/init.vim
 ```
 
 После чего запускаем `nvim` и в командном режиме выполняем `:PlugInstall` 
