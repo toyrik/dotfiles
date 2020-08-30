@@ -89,7 +89,7 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 Для его установки:
 
 ```bash
-sudo apt install -y nvim
+sudo apt install -y neovim
 ```
 Для того чтобы воспользоваться представленной конфигурацией сначала 
 устанавливаем `vim-plug`:
