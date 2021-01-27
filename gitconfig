@@ -1,6 +1,6 @@
 [user]
-	email = 
-	name = 
+	email = toyrik@gmail.com
+	name = toyrik
 [filesystem "Oracle Corporation|11.0.6|/dev/sdc1"]
 	timestampResolution = 1125 microseconds
 	minRacyThreshold = 5698 microseconds
