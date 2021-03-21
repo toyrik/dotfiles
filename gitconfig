@@ -1,0 +1,9 @@
+[user]
+	email = 
+	name = 
+[filesystem "Oracle Corporation|11.0.6|/dev/sdc1"]
+	timestampResolution = 1125 microseconds
+	minRacyThreshold = 5698 microseconds
+[core]
+	excludesfile = /*Путь до каталога пользователя*/.gitexcludes
+	editor = nvim

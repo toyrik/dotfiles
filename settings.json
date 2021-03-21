@@ -1,0 +1,24 @@
+{
+    "workbench.iconTheme": "easy-icons",
+    "markdownlint.config": {
+        "MD001": false,
+        "MD007": false,
+        "MD009": false,
+        "MD013": false,
+        "MD014": false,
+        "MD026": false,
+        "MD033": false,
+        "MD034": false,
+        "MD035": false,
+    },
+    "editor.fontSize": 18,
+    "editor.fontFamily": "JetBrains Mono",
+    "editor.fontLigatures": true,
+    "editor.wordWrap": "on",
+    "files.exclude": {
+        "**/.idea": true,
+        "**/.vscode": true
+    },
+    "files.trimTrailingWhitespace": true,
+    "window.titleBarStyle": "custom"
+}
