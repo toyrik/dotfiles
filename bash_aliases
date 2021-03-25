@@ -31,6 +31,8 @@ alias q="exit"
 alias s="sudo"
 alias c="clear"
 alias a="clear && alias | less"  # Показать список алиасов
+# Запуск файлового менеджера (нужна установка)
+alias rr="ranger"
 
 # Разработка
 alias cept="./vendor/bin/codecept" # алиас вызова codecept
