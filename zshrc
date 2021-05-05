@@ -135,7 +135,11 @@ alias a="clear && alias | less"  # Показать список алиасов
 alias rr="ranger" 
 
 # Разработка
-alias cept="./vendor/bin/codecept" # алиас вызова codecept
+#===
+# Запуск тестов phpunit
+alias phpunit="./vendor/bin/phpunit"
+# алиас вызова codecept
+alias cept="./vendor/bin/codecept" 
 # alias php="/opt/lampp/bin/php" # алиас php для xampp
 
 export NVM_DIR="$HOME/.nvm"
