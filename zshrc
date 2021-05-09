@@ -140,6 +140,7 @@ alias rr="ranger"
 alias phpunit="./vendor/bin/phpunit"
 # алиас вызова codecept
 alias cept="./vendor/bin/codecept" 
+alias artisan="php artisan"
 # alias php="/opt/lampp/bin/php" # алиас php для xampp
 
 export NVM_DIR="$HOME/.nvm"
