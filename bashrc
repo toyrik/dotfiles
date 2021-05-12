@@ -28,7 +28,7 @@ shopt -s checkwinsize
 #shopt -s globstar
 
 # make less more friendly for non-text input files, see lesspipe(1)
-[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
+#[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
 # set variable identifying the chroot you work in (used in the prompt below)
 if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
@@ -57,8 +57,17 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-   #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
-   PS1='\A \033[01;32m\]\u:\[\033[01;34m\]\W\[\033[00m\]\$ '
+    prompt_color='\[\033[;32m\]'
+    info_color='\[\033[1;34m\]'
+    prompt_symbol=👽
+    if [ "$EUID" -eq 0 ]; then # Change prompt colors for root user
+	prompt_color='\[\033[;94m\]'
+	info_color='\[\033[1;31m\]'
+	prompt_symbol=💀
+    fi
+    PS1=$prompt_color'┌──${debian_chroot:+($debian_chroot)──}('$info_color'\u${prompt_symbol}\h'$prompt_color')-[\[\033[0;1m\]\w'$prompt_color']\n'$prompt_color'└─'$info_color'\$\[\033[0m\] '
+    # BackTrack red prompt
+    #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
@@ -83,15 +92,25 @@ if [ -x /usr/bin/dircolors ]; then
     alias grep='grep --color=auto'
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
+    alias diff='diff --color=auto'
+    alias ip='ip --color=auto'
+
+    export LESS_TERMCAP_mb=$'\E[1;31m'     # begin blink
+    export LESS_TERMCAP_md=$'\E[1;36m'     # begin bold
+    export LESS_TERMCAP_me=$'\E[0m'        # reset bold/blink
+    export LESS_TERMCAP_so=$'\E[01;33m'    # begin reverse video
+    export LESS_TERMCAP_se=$'\E[0m'        # reset reverse video
+    export LESS_TERMCAP_us=$'\E[1;32m'     # begin underline
+    export LESS_TERMCAP_ue=$'\E[0m'        # reset underline
 fi
 
 # colored GCC warnings and errors
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # some more ls aliases
-#alias ll='ls -alF'
-#alias la='ls -A'
-#alias l='ls -CF'
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert

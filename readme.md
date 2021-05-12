@@ -4,6 +4,7 @@
 С его помощью можно быстро развернуть удобное(ну про крайней мере для меня)
 окружение в котором присутствуют:
 
+* bash
 * zsh
 * tmux
 * vim
@@ -32,7 +33,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 делаем симлинк для .zshrc
 
 ```bash
-ln -s dotfiles/.zshrc ~/.zshrc
+ln -s dotfiles/zshrc ~/.zshrc
 ```
 
 ## TMUX
@@ -54,7 +55,7 @@ ln -s -f .tmux/.tmux.conf
 делаем симлинк для .tmux.conf.local:
 
 ```bash
-ln -s dotfiles/.tmux.conf.local
+ln -s dotfiles/tmux.conf.local ~/.tmux.conf.local
 ```
 
 ## Vim
@@ -68,7 +69,7 @@ sudo apt install -y vim
 делаем симлинк для .vimrc:
 
 ```bash
-ln -s dotfiles/.vimrc
+ln -s dotfiles/vimrc ~/.vimrc
 ```
 
 и устанавливаем Vundle:
