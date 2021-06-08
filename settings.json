@@ -20,5 +20,6 @@
         "**/.vscode": true
     },
     "files.trimTrailingWhitespace": true,
-    "window.titleBarStyle": "custom"
+    "window.titleBarStyle": "custom",
+    "explorer.confirmDelete": false
 }
