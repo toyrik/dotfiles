@@ -1,5 +1,5 @@
-.idea/*
-netbeans
-node_modules
-.vscode/*
-nbproject
+/.idea/*
+/netbeans/
+/node_modules/
+/.vscode/*
+/nbproject/

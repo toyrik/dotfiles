@@ -1,6 +1,7 @@
 {
     "workbench.iconTheme": "easy-icons",
     "markdownlint.config": {
+
         "MD001": false,
         "MD007": false,
         "MD009": false,
@@ -10,6 +11,7 @@
         "MD033": false,
         "MD034": false,
         "MD035": false,
+        "MD046": false,
     },
     "editor.fontSize": 18,
     "editor.fontFamily": "JetBrains Mono",
@@ -19,7 +21,11 @@
         "**/.idea": true,
         "**/.vscode": true
     },
-    "files.trimTrailingWhitespace": true,
     "window.titleBarStyle": "custom",
-    "explorer.confirmDelete": false
+    "explorer.confirmDelete": false,
+    "window.zoomLevel": -1,
+    "workbench.editorAssociations": {
+        "*.docx": "default"
+    },
+    "git.confirmSync": false
 }
