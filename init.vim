@@ -11,6 +11,10 @@ if &compatible
     set nocompatible
 endif
 
+"Включаем распознавание типов файлов и типо-специфичные плагины:
+filetype on
+filetype plugin on
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                   Plugins!
 "                            Managed with vim-plug
@@ -48,6 +52,9 @@ Plug 'lifepillar/vim-solarized8'
 " Добавляет информативный статусбар
 Plug 'itchyny/lightline.vim'
 
+" Плагин для комментариев
+Plug 'preservim/nerdcommenter'
+
 " Initialize plugin system
 call plug#end()
 "-----------------------------------------------------------------------------
@@ -62,6 +69,7 @@ let &colorcolumn=join(range(81,999),",")
 
 " Перенос строк
 set wrap
+" Плагин для комментариев
 set showbreak=>>
 
 " Настройки отступов
@@ -143,6 +151,8 @@ set wildmenu
 " Настройки темы оформления
 colorscheme gruvbox
 set background=dark
+
+let mapleader = ","
 
 set guifont=Fira\ Code\ Light\ Nerd\ Font\ Complete:h16
 
