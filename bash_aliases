@@ -37,7 +37,9 @@ alias rr="ranger"
 # Разработка
 alias cept="./vendor/bin/codecept" # алиас вызова codecept
 alias composer8.1="php8.1 /usr/local/bin/composer"
+alias composer7.4="php7.4 /usr/local/bin/composer"
 # alias php="/opt/lampp/bin/php" # алиас php для xampp
 
 # Artisan
 alias artisan8.1="php8.1 artisan"
+alias artisan7.4="php7.4 artisan"
